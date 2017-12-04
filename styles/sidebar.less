@@ -1,0 +1,90 @@
+@import "variables";
+@import "ui-variables";
+
+#account-switcher .primary-item .name {
+  color: @taiga-dark;
+      .img.content-dark{
+        content: url('mailspring://Material-Spring/img/3dots@2x.png');
+        background-size: auto;
+		height:28px;
+		width:28px;
+    }
+}
+
+.column-MessageListSidebar, .column-MessageList, .scroll-region-content{
+  background-color: @taiga-lighter !important;
+}
+
+div.account-switcher *{
+	content: url('mailspring://Material-Spring/img/3dots@2x.png');
+	width: auto !important;
+	height: 20px !important;
+}
+
+.account-sidebar-sections {
+  background-color: @taiga-lighter !important;
+
+  section {
+    .item-container {
+      margin: 0 10px 0 0 !important;
+
+      .disclosure-triangle {
+        display: flex;
+        align-items: center;
+        width: 15px;
+        div {
+          border-left-color: @taiga-light;
+          border-top-width: 3px;
+          border-bottom-width: 3px;
+          border-left-width: 5px;
+          transform-origin: 2px;
+        }
+      }
+
+      .item {
+        padding: 0 10px !important;
+        color: @taiga-light !important;
+        cursor: pointer !important;
+
+        .item-count-box {
+          background: transparent !important;
+          color: @taiga-light !important;
+          box-shadow: 0 0.5px 0 @taiga-light, 0 -0.5px 0 @taiga-light, 0.5px 0 0 @taiga-light, -0.5px 0 0 @taiga-light !important;
+        }
+
+        &.selected {
+          background: lighten(@taiga-light, 30%) !important;
+          border-radius: @base-border-radius;
+          color: @taiga-dark !important;
+
+          .item-count-box {
+            background: transparent !important;
+            color: @taiga-dark !important;
+            box-shadow: 0 0.5px 0 @taiga-dark, 0 -0.5px 0 @taiga-dark, 0.5px 0 0 @taiga-dark, -0.5px 0 0 @taiga-dark !important;
+          }
+
+          .icon {
+            img {
+              background: @taiga-dark !important;
+            }
+          }
+        }
+        &#N1-Snoozed .icon img{
+          background: orangered!important;
+        }
+      }
+    }
+  }
+}
+
+
+.account-sidebar-sections section > div > div{
+  // Inbox icon
+  &:nth-child(1) > .item-container .item .icon img{
+    background: @toolbar-bg!important;
+  }
+  // Sent mail icon
+  &:nth-child(5) > span.item-container > .item > .icon img{
+    background: green!important;
+  }
+}

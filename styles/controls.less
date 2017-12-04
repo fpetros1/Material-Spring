@@ -1,0 +1,177 @@
+@import "variables";
+
+/**
+ * Buttons
+ */
+.btn-toolbar, .token, .actions>.btn, .new-package>.btn, .appearance-mode-switch>.btn {
+  box-shadow: none !important;
+  background: @white !important;
+  border: 1px solid @taiga-light !important;
+  border-radius: @base-border-radius !important;
+  cursor: pointer !important;
+}
+
+.composer-action-bar-content {
+  .btn-toolbar {
+    border: 0 !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+  }
+}
+
+.composer-action-bar-plugins, .composer-action-bar-content{
+  .btn-toolbar{
+    .content-mask{
+      background: @taiga-dark !important;
+    }
+  }
+}
+
+// .btn-attach, .btn-trash{
+//   .content-mask{
+//     background: @taiga-dark !important;
+//   }
+// }
+
+/**
+ * Placeholder
+ */
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: @white;
+}
+
+/**
+* Toolbar buttons
+*/
+.btn-toolbar {
+  background: transparent !important;
+  border: none !important;
+  .content-mask {
+    background: @white !important;
+    border: none !important;
+  }
+}
+
+.toolbar-activity{
+  padding-right: 10px;
+  .content-mask {
+    background: @white !important;
+    border: none !important;
+  }
+}
+
+
+
+body.platform-win32 {
+  .sheet-toolbar-container {
+    .btn-toolbar {
+      border: 0 !important;
+    }
+  }
+}
+
+.btn.btn-emphasis {
+  background-color: @taiga-accent !important;
+  border-color: @taiga-accent !important;
+  color: @white !important;
+
+  img.content-mask {
+    background-color: @white !important;
+  }
+}
+
+.button-dropdown.bordered {
+  .primary-item {
+    cursor: pointer !important;
+    box-shadow: none !important;
+    background: @white !important;
+    border: 1px solid @taiga-light !important;
+    border-top-left-radius: @base-border-radius !important;
+    border-bottom-left-radius: @base-border-radius !important;
+    img {
+      position: relative;
+      top: -2px;
+    }
+  }
+
+  .secondary-picker {
+    cursor: pointer !important;
+    box-shadow: none !important;
+    background: @white !important;
+    border: 1px solid @taiga-light !important;
+    border-top-right-radius: @base-border-radius !important;
+    border-bottom-right-radius: @base-border-radius !important;
+    margin-left: -1px !important;
+  }
+
+  .secondary-items {
+    .item  {
+      cursor: pointer;
+      color: @taiga-light !important;
+      background: @white !important;
+
+      .button-dropdown {
+        img {
+          background: @taiga-light  !important;
+        }
+      }
+    }
+  }
+}
+
+/**
+ * Feedback button
+ */
+.btn-feedback {
+  background: @taiga-accent !important;
+  border: none !important;
+}
+
+/**
+ * Search bar
+ */
+
+ .search-bar .menu .header-container input.empty {
+   background: @inbox-lighter;
+   color: @white;
+ }
+
+.content-container {
+  .item.selected {
+    background: @taiga-light !important;
+    color: @white !important;
+  }
+}
+
+/**
+ * Dropdown
+ */
+.menu {
+  .item.selected {
+    background: @taiga-light !important;
+    .primary {
+      color: @white !important;
+    }
+    .secondary {
+      color: @taiga-lighter !important;
+    }
+  }
+}
+
+/**
+ * Plugin page
+ */
+.package {
+  border-radius: @base-border-radius;
+}
+
+/**
+ * Prefs page
+ */
+.appearance-mode {
+  cursor: pointer;
+
+  &.active {
+    background-color: lighten(@taiga-light, 30%) !important;
+  }
+}

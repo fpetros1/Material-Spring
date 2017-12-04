@@ -1,13 +1,14 @@
 {
-  "name": "theme-starter",
-  "title": "Starer Theme",
-  "displayName": "Starer Theme",
+  "name": "material-spring",
+  "title": "Material Spring",
+  "displayName": "Material Spring",
   "theme": "ui",
-  "version": "0.1.0",
-  "description": "A great dark theme to start your own themes.",
+  "version": "1.0.0",
+  "description": "A theme based on Google's Material Design.",
   "license": "GPL-3.0",
   "engines": {
     "mailspring": "*"
-  }
+  },
+  "styleSheets": ["controls", "email-frame", "sidebar", "threads", "notifications", "compose-button", "headerbar","compose"]
 }
 
