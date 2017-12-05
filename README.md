@@ -18,3 +18,4 @@ This theme is based on:
 
 Icons from:
 - https://material.io/icons
+- https://github.com/Templarian/MaterialDesign
