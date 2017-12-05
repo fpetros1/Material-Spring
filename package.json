@@ -3,12 +3,11 @@
   "title": "Material Spring",
   "displayName": "Material Spring",
   "theme": "ui",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A theme based on Google's Material Design.",
   "license": "GPL-3.0",
   "engines": {
     "mailspring": "*"
-  },
-  "styleSheets": ["controls", "email-frame", "sidebar", "threads", "notifications", "compose-button", "headerbar","compose"]
+  }
 }
 
