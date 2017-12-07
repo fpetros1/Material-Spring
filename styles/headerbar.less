@@ -2,7 +2,7 @@
 @import "ui-variables";
 @import (less) "material-css/material.min.css";
 
-div.item-container{
+div.sheet-toolbar-container{
 	img{
 	  -webkit-mask-size: 32px 32px;
 	  width:32px  !important;
@@ -32,7 +32,7 @@ div.item-container{
 	}
 	img[alt="toolbar-star.png"]{
 		-webkit-mask-image: url('mailspring://Material-Spring/img/unstar@2x.png') !important;
-	}toolbar-star.png
+	}
 	img[alt="toolbar-star-selected.png"]{
 		-webkit-mask-image: url('mailspring://Material-Spring/img/star@2x.png') !important;
 	}
@@ -49,7 +49,15 @@ div.item-container{
 	img[alt="windows-menu-icon.png"]{
 		-webkit-mask-image: url('mailspring://Material-Spring/img/settings@2x.png') !important;
 	}
-	
+	img[alt="icon-toolbar-activity.png"]{
+		-webkit-mask-image: url('mailspring://Material-Spring/img/chart2@2x.png') !important;
+	}
+}
+
+div.toolbar-MessageListSidebar{
+	img[alt="toolbar-person-sidebar.png"]{
+		-webkit-mask-image: url('mailspring://Material-Spring/img/person-selected@2x.png') !important;
+	}
 }
 
 div:not(.layout-mode-popout){
