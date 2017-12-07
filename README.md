@@ -4,7 +4,7 @@ NOTICE: WORK IN PROGRESS. Check back soon for updates.
 
 A theme based on Google's Material Design for the [Mailspring](http://www.getmailspring.com/) email client.
 
-<img src="https://raw.githubusercontent.com/LightSnowDev/Material-Spring/master/screenshot/custom-theme-min.png" />
+<img src="https://raw.githubusercontent.com/LightSnowDev/Material-Spring/master/screenshot/custom-theme.png" />
 
 ## This theme
 
