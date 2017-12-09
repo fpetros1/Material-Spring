@@ -6,7 +6,7 @@
       &.focused:hover .list-column-HoverActions .inner {
         color: @taiga-dark !important;
         background-image: linear-gradient(90deg, fadeout(@taiga-lighter, 100%) 0%, darken(@taiga-lighter, 10%) 100%);
-
+		
         .action {
           -webkit-filter: none;
         }
@@ -20,14 +20,15 @@
         .thread-icon, .mail-important-icon, .draft-icon {
           -webkit-filter: none;
         }
+		border-color: @taiga-accent !important;
+		padding-bottom: 1px;
+		border-width: 0 0 0px 4px !important;
+background-color: #E6ECFF !important;
       }
       &:hover {
         .thread-icon {
           visibility: inherit;
         }
-      }
-      .list-column {
-        border-bottom: 0 !important;
       }
     }
     .scroll-region-content {
@@ -36,16 +37,15 @@
           .list-item {
             cursor: pointer !important;
             box-sizing: border-box;
-            border: 0 !important;
             background-color: @white !important;
             color: @taiga-dark !important;
             &.focused {
               color: @taiga-dark !important;
-              background-color: darken(@taiga-lighter, 5%) !important;
+			  background-color: #E6ECFF !important;
             }
             &.selected {
               color: @taiga-dark !important;
-              background-color: darken(@taiga-lighter, 5%) !important;
+              background-color: darken(#E6ECFF, 5%) !important;
             }
             &.keyboard-cursor {
               .list-column-Item {
