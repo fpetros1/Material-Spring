@@ -37,11 +37,9 @@ div.account-switcher *{
         color: @taiga-light !important;
         cursor: pointer !important;
 		
+		
 		img{
-		  
-	  -webkit-mask-size: 32px 32px;
-	  width:32px  !important;
-	  height:32px !important;
+		  -webkit-mask-size: 100%;
 		}
 		
 		img[alt="inbox.png"]{
@@ -80,6 +78,9 @@ div.account-switcher *{
 		img[alt="activity.png"]{
 		  -webkit-mask-image: url('mailspring://Material-Spring/img/chart2@2x.png') !important;
 		}
+		img[alt="activity.png"]{
+		  -webkit-mask-image: url('mailspring://Material-Spring/img/chart2@2x.png') !important;
+		}
 
         .item-count-box {
           background: transparent !important;
@@ -88,8 +89,12 @@ div.account-switcher *{
         }
 
         &.selected {
-          background: lighten(@taiga-light, 30%) !important;
-          border-radius: @base-border-radius;
+			background: lighten(@taiga-light, 30%) !important;
+          	margin-left: -15px;
+			padding-left: 25px !important;
+			margin-right: -10px;
+			padding-right: 5px !important;
+			border-radius: 0px;
           color: @taiga-dark !important;
 
           .item-count-box {
@@ -112,7 +117,7 @@ div.account-switcher *{
   }
 }
 
-
+/*
 .account-sidebar-sections section > div > div{
   // Inbox icon
   &:nth-child(1) > .item-container .item .icon img{
@@ -123,3 +128,4 @@ div.account-switcher *{
     background: green!important;
   }
 }
+*/
