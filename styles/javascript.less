@@ -1,0 +1,117 @@
+.ripple-effect {
+  background-color: rgba(255, 255, 255, .1);
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  position: absolute;
+  animation-name: ripple;
+  animation-iteration-count: 1;
+  animation-duration: 1s;
+  transform: translateX(-50%) translateY(-50%);
+  opacity: 0.2;
+}
+
+@keyframes ripple {
+  from {
+    width: 0;
+    height: 0;
+    opacity: 0.4;
+  }
+  to {
+    width: 750px;
+    height: 750px;
+    opacity: 0;
+  }
+}
+
+@api: `function(){
+
+    // Set up the API that we want to expose in other JavaScript contexts.
+    var api = {
+
+        // This is just me testing some JavaScript stuff.
+        getContent: function() {
+		
+var rippleElements = document.getElementsByClassName('item selected');
+
+//Create Ripple Effect
+function createRipple() {
+  //Create Ripple
+  ripple = document.createElement("div");
+  ripple.className = "ripple-effect";
+
+  //Add Ripple to document
+  this.appendChild(ripple);
+
+  //Position Ripple
+  ripple.style.top = (event.pageY - (ripple.offsetWidth / 2)) + "px";
+  ripple.style.left = (event.pageX - (ripple.offsetHeight / 2)) + "px";
+
+  ripple.addEventListener("animationend", destroyRipple, false);
+  ripple.addEventListener("webkitAnimationEnd", destroyRipple, false);
+  ripple.addEventListener("oAnimationEnd", destroyRipple, false);
+  ripple.addEventListener("MSAnimationEnd", destroyRipple, false);
+}
+
+function destroyRipple() {
+  this.parentElement.removeChild(this);
+}
+
+//Add Event Listeners
+for (var i = 0; i < rippleElements.length; i++) {
+  rippleElements[i].addEventListener('mousedown', createRipple, false);
+  rippleElements[i].addEventListener('touchstart', createRipple, false);
+}
+            return( "This is yo' content!" );
+
+        },
+
+
+        // When executing a JavaScript expression, you can only execute one expression
+        // at a time (ie, no semi-colons). Unless, you are in a function. The point of
+        // the run() function is to allow the calling context a way to enter a function
+        // context and get access to the API at the same time. The API is injected as the
+        // only argument to the given callback.
+        // --
+        // NOTE: The callback MUST RETURN A VALUE so that LESS can get the value of it.
+        run: function( callback ) {
+
+            return( callback( api ) );
+
+        }
+
+    };
+
+
+    // Return the public API. Since this JavaScript expression is return the parent
+    // Function, it will have to invoked in a different JavaScript context to actually
+    // get access to the API.
+    return( api );
+
+}` ;
+
+
+// I assign the API the global namespace, "api". This could have been done in the
+// previous JavaScript code block; but, I kind of liked the idea of breaking it out into
+// its own rsponsability.
+// --
+// NOTE: I am using a self-invoking function here to help ensure that "this" points to
+// the global context and not to the context of the evaluation (if its different).
+@apiGlobalInjector: `(function() {
+
+    // Inject the API and store it in the global object.
+    this.api = (@{api})();
+
+    // The JavaScript HAS TO RETURN something so LESS CSS can assigne the variable value.
+    return( "Injected in global" );
+
+})()` ;
+
+
+// ---------------------------------------------------------- //
+// ---------------------------------------------------------- //
+
+
+.message-subject {
+    content: `api.getContent()` ;
+}

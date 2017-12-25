@@ -27,3 +27,7 @@ This theme is based on:
 Icons from:
 - https://material.io/icons
 - https://github.com/Templarian/MaterialDesign
+
+Code snippets from:
+- Execute javascript in LESS: https://www.bennadel.com/blog/2638-executing-javascript-in-the-less-css-precompiler.htm
+- ripple css/js: https://codepen.io/wheately/
