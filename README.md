@@ -3,6 +3,7 @@
 A theme based on Google's Material Design for the [Mailspring](http://www.getmailspring.com/) email client.
 
 <img src="https://raw.githubusercontent.com/LightSnowDev/Material-Spring/master/screenshot/custom-theme.png" />
+<img src="https://raw.githubusercontent.com/LightSnowDev/Material-Spring/master/screenshot/settings-theme.png" />
 
 ## This theme
 
@@ -30,4 +31,4 @@ Icons from:
 
 Code snippets from:
 - Execute javascript in LESS: https://www.bennadel.com/blog/2638-executing-javascript-in-the-less-css-precompiler.htm
-- ripple css/js: https://codepen.io/wheately/
+- Ripple css/js: https://codepen.io/wheately/
