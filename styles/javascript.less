@@ -32,7 +32,8 @@
         // This is just me testing some JavaScript stuff.
         getContent: function() {
 		
-var rippleElements = document.getElementsByClassName('item selected');
+		
+var rippleElements = document.getElementsByClassName('item-container');
 
 //Create Ripple Effect
 function createRipple() {
@@ -62,6 +63,7 @@ for (var i = 0; i < rippleElements.length; i++) {
   rippleElements[i].addEventListener('mousedown', createRipple, false);
   rippleElements[i].addEventListener('touchstart', createRipple, false);
 }
+			console.warn("fired");
             return( "This is yo' content!" );
 
         },
@@ -112,6 +114,6 @@ for (var i = 0; i < rippleElements.length; i++) {
 // ---------------------------------------------------------- //
 
 
-.message-subject {
+.item.selected {
     content: `api.getContent()` ;
 }
