@@ -1,14 +1,13 @@
 .ripple-effect {
-  background-color: rgba(255, 255, 255, .1);
-  width: 100%;
-  height: 100%;
+  background-color: rgba(255, 255, 255, .95);
   border-radius: 100%;
   position: absolute;
   animation-name: ripple;
   animation-iteration-count: 1;
   animation-duration: 1s;
   transform: translateX(-50%) translateY(-50%);
-  opacity: 0.2;
+  opacity: 0.95;
+  overflow:hidden;
 }
 
 @keyframes ripple {
@@ -28,15 +27,16 @@
 
     // Set up the API that we want to expose in other JavaScript contexts.
     var api = {
-
         // This is just me testing some JavaScript stuff.
-        getContent: function() {
+        getContent: function() {		
 		
 		
 var rippleElements = document.getElementsByClassName('item-container');
 
 //Create Ripple Effect
 function createRipple() {
+  if(this.childElementCount !== 2)
+  return;
   //Create Ripple
   ripple = document.createElement("div");
   ripple.className = "ripple-effect";
@@ -52,6 +52,8 @@ function createRipple() {
   ripple.addEventListener("webkitAnimationEnd", destroyRipple, false);
   ripple.addEventListener("oAnimationEnd", destroyRipple, false);
   ripple.addEventListener("MSAnimationEnd", destroyRipple, false);
+  
+  console.warn("CUSTOM JS: fired");
 }
 
 function destroyRipple() {
@@ -60,11 +62,21 @@ function destroyRipple() {
 
 //Add Event Listeners
 for (var i = 0; i < rippleElements.length; i++) {
+  if(rippleElements[i].getAttribute('test' === true)){
+	console.warn("CUSTOM JS: event already exists");
+  }
+  else{
+	//console.warn("CUSTOM JS: unknown if event already exists");
+  }
+  rippleElements[i].setAttribute('test','true');
+  rippleElements[i].removeEventListener('mousedown', createRipple);
+  rippleElements[i].removeEventListener('touchstart', createRipple);
   rippleElements[i].addEventListener('mousedown', createRipple, false);
   rippleElements[i].addEventListener('touchstart', createRipple, false);
 }
-			console.warn("fired");
-            return( "This is yo' content!" );
+		
+			console.warn("CUSTOM JS: " + rippleElements.length + " fire event added");
+            return( "This is content!" );
 
         },
 
@@ -114,6 +126,6 @@ for (var i = 0; i < rippleElements.length; i++) {
 // ---------------------------------------------------------- //
 
 
-.item.selected {
+.theme-material-spring {
     content: `api.getContent()` ;
 }
