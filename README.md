@@ -19,6 +19,9 @@ Notice that this theme is being worked on. Check back soon for updates.
 5. A success message should appear.
 6. (You can delete the unzipped folder now)
 
+## Plattform support
+This theme was originaly made for Windows 10 at a scaling of 125%. I'm not sure how it behaves with Mac or Linux at different resolutions so please give me feedback on this.
+
 ## Credit
 
 This theme is based on:
