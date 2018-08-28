@@ -1,14 +1,13 @@
 @import "variables";
 
-
-.column-MessageListSidebar, .column-MessageList, .scroll-region-content{
+.column-MessageListSidebar, .column-MessageList, .scroll-region-content {
   background-color: @taiga-lighter !important;
 }
 
-div.account-switcher *{
-	content: url('mailspring://Material-Spring/img/3dots@2x.png');
-	width: auto !important;
-	height: 20px !important;
+div.account-switcher * {
+  content: url('mailspring://Material-Spring/img/3dots@2x.png');
+  width: auto !important;
+  height: 20px !important;
 }
 
 .account-sidebar-sections {
@@ -35,51 +34,50 @@ div.account-switcher *{
         padding: 0 10px !important;
         color: @taiga-light !important;
         cursor: pointer !important;
-		
-		
-		img{
-		  -webkit-mask-size: 100%;
-		}
-		
-		img[alt="inbox.png"]{
-		  -webkit-mask-image: url('mailspring://Material-Spring/img/inbox@2x.png') !important;
-		}
-		img[alt="unread.png"]{
-		  -webkit-mask-image: url('mailspring://Material-Spring/img/mark-unread@2x.png') !important;
-		}
-		img[alt="starred.png"]{
-		  -webkit-mask-image: url('mailspring://Material-Spring/img/star@2x.png') !important;
-		}
-		img[alt="reminders.png"]{
-		  -webkit-mask-image: url('mailspring://Material-Spring/img/reminder@2x.png') !important;
-		}
-		img[alt="important.png"]{
-		  -webkit-mask-image: url('mailspring://Material-Spring/img/bell@2x.png') !important;
-		}
-		img[alt="snoozed.png"]{
-		  -webkit-mask-image: url('mailspring://Material-Spring/img/snooze@2x.png') !important;
-		}
-		img[alt="sent.png"]{
-		  -webkit-mask-image: url('mailspring://Material-Spring/img/sent@2x.png') !important;
-		}
-		img[alt="all.png"]{
-		  -webkit-mask-image: url('mailspring://Material-Spring/img/mail-all@2x.png') !important;
-		}
-		img[alt="spam.png"]{
-		  -webkit-mask-image: url('mailspring://Material-Spring/img/spam@2x.png') !important;
-		}
-		img[alt="trash.png"]{
-		  -webkit-mask-image: url('mailspring://Material-Spring/img/trash@2x.png') !important;
-		}
-		img[alt="drafts.png"]{
-		  -webkit-mask-image: url('mailspring://Material-Spring/img/draft@2x.png') !important;
-		}
-		img[alt="activity.png"]{
-		  -webkit-mask-image: url('mailspring://Material-Spring/img/chart2@2x.png') !important;
-		}
-		img[alt="activity.png"]{
-		  -webkit-mask-image: url('mailspring://Material-Spring/img/chart2@2x.png') !important;
-		}
+
+        img {
+          -webkit-mask-size: 100%;
+        }
+
+        img[alt="inbox.png"] {
+          -webkit-mask-image: url('mailspring://Material-Spring/img/inbox@2x.png') !important;
+        }
+        img[alt="unread.png"] {
+          -webkit-mask-image: url('mailspring://Material-Spring/img/mark-unread@2x.png') !important;
+        }
+        img[alt="starred.png"] {
+          -webkit-mask-image: url('mailspring://Material-Spring/img/star@2x.png') !important;
+        }
+        img[alt="reminders.png"] {
+          -webkit-mask-image: url('mailspring://Material-Spring/img/reminder@2x.png') !important;
+        }
+        img[alt="important.png"] {
+          -webkit-mask-image: url('mailspring://Material-Spring/img/bell@2x.png') !important;
+        }
+        img[alt="snoozed.png"] {
+          -webkit-mask-image: url('mailspring://Material-Spring/img/snooze@2x.png') !important;
+        }
+        img[alt="sent.png"] {
+          -webkit-mask-image: url('mailspring://Material-Spring/img/sent@2x.png') !important;
+        }
+        img[alt="all.png"] {
+          -webkit-mask-image: url('mailspring://Material-Spring/img/mail-all@2x.png') !important;
+        }
+        img[alt="spam.png"] {
+          -webkit-mask-image: url('mailspring://Material-Spring/img/spam@2x.png') !important;
+        }
+        img[alt="trash.png"] {
+          -webkit-mask-image: url('mailspring://Material-Spring/img/trash@2x.png') !important;
+        }
+        img[alt="drafts.png"] {
+          -webkit-mask-image: url('mailspring://Material-Spring/img/draft@2x.png') !important;
+        }
+        img[alt="activity.png"] {
+          -webkit-mask-image: url('mailspring://Material-Spring/img/chart2@2x.png') !important;
+        }
+        img[alt="activity.png"] {
+          -webkit-mask-image: url('mailspring://Material-Spring/img/chart2@2x.png') !important;
+        }
 
         .item-count-box {
           background: transparent !important;
@@ -88,15 +86,15 @@ div.account-switcher *{
         }
 
         &.selected {
-		    //because of the ripple effect:
-		    position: relative;
-			
-			background: lighten(@taiga-light, 30%) !important;
-			margin-left: -40px;
-			padding-left: 50px !important;
-			margin-right: -10px;
-			padding-right: 5px !important;
-			border-radius: 0px;
+          //because of the ripple effect:
+          position: relative;
+
+          background: lighten(@taiga-light, 30%) !important;
+          margin-left: -40px;
+          padding-left: 50px !important;
+          margin-right: -10px;
+          padding-right: 5px !important;
+          border-radius: 0px;
           color: @taiga-dark !important;
 
           .item-count-box {
@@ -111,8 +109,8 @@ div.account-switcher *{
             }
           }
         }
-        &#N1-Snoozed .icon img{
-          background: orangered!important;
+        &#N1-Snoozed .icon img {
+          background: orangered !important;
         }
       }
     }
