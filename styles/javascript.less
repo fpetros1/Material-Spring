@@ -7,7 +7,7 @@
   animation-duration: 1s;
   transform: translateX(-50%) translateY(-50%);
   opacity: 0.95;
-  overflow: hidden;
+  overflow:hidden;
 }
 
 @keyframes ripple {
@@ -102,7 +102,8 @@ for (var i = 0; i < rippleElements.length; i++) {
     // get access to the API.
     return( api );
 
-}`;
+}` ;
+
 
 // I assign the API the global namespace, "api". This could have been done in the
 // previous JavaScript code block; but, I kind of liked the idea of breaking it out into
@@ -118,11 +119,13 @@ for (var i = 0; i < rippleElements.length; i++) {
     // The JavaScript HAS TO RETURN something so LESS CSS can assigne the variable value.
     return( "Injected in global" );
 
-})()`;
+})()` ;
+
 
 // ---------------------------------------------------------- //
 // ---------------------------------------------------------- //
+
 
 .theme-material-spring {
-  content: `api.getContent()`;
+    content: `api.getContent()` ;
 }

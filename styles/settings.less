@@ -2,15 +2,13 @@ input[type="checkbox"] {
   position: absolute;
   opacity: 0;
 }
-
 input[type="checkbox"] + label {
   position: relative;
   cursor: pointer;
-  padding: 0;
+  padding: 0;    
 }
-
 input[type="checkbox"] + label:before {
-  margin-left: -20px;
+margin-left: -20px;
   content: '';
   margin-top: 1.8px;
   margin-right: 10px;
@@ -22,104 +20,98 @@ input[type="checkbox"] + label:before {
   border: 2px solid rgba(0, 0, 0, 0.54);
   border-radius: 2.5px;
 }
-
 input[type="checkbox"]:hover + label:before {
   background: #ECF2FD;
 }
-
 input[type="checkbox"]:focus + label:before {
   box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12);
 }
-
 input[type="checkbox"]:checked + label:before {
   background: #4285f4;
   border: none;
 }
-
 input[type="checkbox"]:disabled + label {
   color: #b8b8b8;
   cursor: auto;
 }
-
 input[type="checkbox"]:disabled + label:before {
   box-shadow: none;
   background: #ddd;
 }
-
 input[type="checkbox"]:checked + label:after {
-  margin-left: -22px;
-  position: absolute;
-  left: 19.5px;
-  top: 3.8px;
-  background: white;
-  width: 0px;
-  height: 0px;
-  box-shadow: none;
-  content: "L";
-  font-size: 13px;
-  color: white;
-  -webkit-transform: rotate(45deg) scaleX(-1);
+	margin-left: -22px;
+    position: absolute;
+    left: 19.5px;
+    top: 3.8px;
+    background: white;
+    width: 0px;
+    height: 0px;
+    box-shadow: none;
+    content: "L";
+    font-size: 13px;
+    color: white;
+    -webkit-transform: rotate(45deg) scaleX(-1);
 }
 
-div.toolbar-Preferences {
-  box-shadow: 0 7px 0px #4285f4, 0 1px 1px #4285f4 !important;
+div.toolbar-Preferences{
+	box-shadow: 0 7px 0px #4285f4, 0 1px 1px #4285f4 !important;
 }
 
-div.container-preference-tabs {
-  border-bottom: none !important;;
+div.container-preference-tabs{
+	border-bottom: none !important;;
 }
 
-div.preferences-tabs {
-  background-color: #4285f4 !important;
-  padding-top: 0px !important;
-  color: rgb(209, 225, 251);
-  margin-bottom: 8px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-
-  .item {
-    .tab-icon {
-      width: 50px !important;
-      height: 50px !important;
-    }
-    .name {
-      padding: 6px 3.6px 12px 3.6px;
-    }
-  }
-  img[alt="icon-preferences-general.png"] {
-    content: url('mailspring://Material-Spring/img/settings/settings.png');
-  }
-  img[alt="icon-preferences-accounts.png"] {
-    content: url('mailspring://Material-Spring/img/settings/account-multiple.png');
-  }
-  img[alt="icon-preferences-subscription.png"] {
-    content: url('mailspring://Material-Spring/img/settings/credit-card.png');
-  }
-  img[alt="icon-preferences-appearance.png"] {
-    content: url('mailspring://Material-Spring/img/settings/palette.png');
-  }
-  img[alt="icon-preferences-shortcuts.png"] {
-    content: url('mailspring://Material-Spring/img/settings/keyboard.png');
-  }
-  img[alt="icon-preferences-mail-rules.png"] {
-    content: url('mailspring://Material-Spring/img/settings/directions-fork.png');
-  }
-  img[alt="icon-preferences-folders.png"] {
-    content: url('mailspring://Material-Spring/img/settings/folder-multiple.png');
-  }
-  img[alt="icon-preferences-signatures.png"] {
-    content: url('mailspring://Material-Spring/img/settings/pen.png');
-  }
-  img[alt="icon-preferences-templates.png"] {
-    content: url('mailspring://Material-Spring/img/settings/file-template.png');
-  }
-
+div.preferences-tabs{
+	background-color: #4285f4 !important;
+	padding-top: 0px !important;
+	color: rgb(209, 225, 251);
+	margin-bottom: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+	
+	.item{
+		.tab-icon{
+			width: 50px !important;
+			height: 50px !important;
+		}
+		.name{
+			padding: 6px 3.6px 12px 3.6px;
+		}
+	}
+	img[alt="icon-preferences-general.png"]{
+        content: url('mailspring://Material-Spring/img/settings/settings.png');
+	}
+	img[alt="icon-preferences-accounts.png"]{
+        content: url('mailspring://Material-Spring/img/settings/account-multiple.png');
+	}
+	img[alt="icon-preferences-subscription.png"]{
+        content: url('mailspring://Material-Spring/img/settings/credit-card.png');
+	}
+	img[alt="icon-preferences-appearance.png"]{
+        content: url('mailspring://Material-Spring/img/settings/palette.png');
+	}
+	img[alt="icon-preferences-shortcuts.png"]{
+        content: url('mailspring://Material-Spring/img/settings/keyboard.png');
+	}
+	img[alt="icon-preferences-mail-rules.png"]{
+        content: url('mailspring://Material-Spring/img/settings/directions-fork.png');
+	}
+	img[alt="icon-preferences-folders.png"]{
+        content: url('mailspring://Material-Spring/img/settings/folder-multiple.png');
+	}
+	img[alt="icon-preferences-signatures.png"]{
+        content: url('mailspring://Material-Spring/img/settings/pen.png');
+	}
+	img[alt="icon-preferences-templates.png"]{
+        content: url('mailspring://Material-Spring/img/settings/file-template.png');
+	}
+	
 }
 
-.preferences-tabs .item.active {
-  background-color: #4285f4 !important;
-  border-bottom: 3px solid #F8DC1A;
-  box-shadow: none !important;
-  color: white;
+.preferences-tabs .item.active{
+	background-color: #4285f4 !important;
+	border-bottom: 3px solid #F8DC1A;
+	box-shadow: none !important;
+	color: white;
 }
 
 
