@@ -118,11 +118,15 @@ div.sheet-toolbar-container {
     -webkit-mask-image: url('mailspring://Material-Spring/img/snooze@2x.png') !important;
   }
   img[alt="ic-toolbar-native-share.png"] {
-    height: 16px;
-    width: 16px;
     -webkit-mask-image: url('mailspring://Material-Spring/img/share@2x.png') !important;
+	height: 32px !important;
+    width: 32px !important;
+	/* look for: div title="Share" for more details */
   }
-
+  div[title="Share"]{
+	zoom: 50% !important; /* the zoom: 0.5 for the 'ic-toolbar-native-share.png' icon does not work, so we enable it on the button level */
+	padding: 24.4px;
+  }
   img[alt="toolbar-person-sidebar.png"] {
     -webkit-mask-image: url('mailspring://Material-Spring/img/person@2x.png') !important;
   }
