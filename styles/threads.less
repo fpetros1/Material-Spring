@@ -1,5 +1,28 @@
 @import "variables";
 
+/*Popup for activity-button (header bar button)*/
+nylas-popover-container{
+  div[class="scroll-region-content-inner"]{
+    background:white;
+  }
+}
+
+/* Not used/not working. should round up the pop up
+body.platform-win32 .fixed-popover{
+  border-radius: 10px !important;
+  padding-bottom: 4px !important;
+}*/
+
+/* white background for the activity analytics page */
+div[class="column-ActivityContent"]{
+  .scroll-region-content{
+    border-left: 1px;
+	border-left-color: rgba(221, 221, 221, 0.6);
+	background-color: white !important;
+  }
+}
+
+/* for the e-mail threads */
 .thread-list {
   .list-container {
     .list-item {
@@ -33,7 +56,9 @@
     }
     .scroll-region-content {
       .scroll-region-content-inner {
+	    /* Not used, needs to be reimplemented. Shoud be on "column-ThreadList" level, since it need o be on top of "column-MessageList"
         -webkit-box-shadow: 1.8px -1px 3px 0px rgb(213, 213, 213);
+		*/
         .list-rows {
           .list-item {
             cursor: pointer !important;
