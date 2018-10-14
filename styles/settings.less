@@ -1,3 +1,10 @@
+/*
+ * File: settings.less
+ *
+ * This file handles the settings page of Mailspring.
+ *
+ */
+
 input[type="checkbox"] {
   position: absolute;
   opacity: 0;
@@ -11,7 +18,7 @@ input[type="checkbox"] + label {
 
 input[type="checkbox"] + label:before {
   margin-left: -20px;
-  content: '';
+  content: "";
   margin-top: 1.8px;
   margin-right: 10px;
   display: inline-block;
@@ -24,7 +31,7 @@ input[type="checkbox"] + label:before {
 }
 
 input[type="checkbox"]:hover + label:before {
-  background: #ECF2FD;
+  background: #ecf2fd;
 }
 
 input[type="checkbox"]:focus + label:before {
@@ -66,7 +73,7 @@ div.toolbar-Preferences {
 }
 
 div.container-preference-tabs {
-  border-bottom: none !important;;
+  border-bottom: none !important;
 }
 
 div.preferences-tabs {
@@ -86,63 +93,60 @@ div.preferences-tabs {
     }
   }
   img[alt="icon-preferences-general.png"] {
-    content: url('mailspring://Material-Spring/img/settings/settings.png');
+    content: url("mailspring://Material-Spring/img/settings/settings.png");
   }
   img[alt="icon-preferences-accounts.png"] {
-    content: url('mailspring://Material-Spring/img/settings/account-multiple.png');
+    content: url("mailspring://Material-Spring/img/settings/account-multiple.png");
   }
   img[alt="icon-preferences-subscription.png"] {
-    content: url('mailspring://Material-Spring/img/settings/credit-card.png');
+    content: url("mailspring://Material-Spring/img/settings/credit-card.png");
   }
   img[alt="icon-preferences-appearance.png"] {
-    content: url('mailspring://Material-Spring/img/settings/palette.png');
+    content: url("mailspring://Material-Spring/img/settings/palette.png");
   }
   img[alt="icon-preferences-shortcuts.png"] {
-    content: url('mailspring://Material-Spring/img/settings/keyboard.png');
+    content: url("mailspring://Material-Spring/img/settings/keyboard.png");
   }
   img[alt="icon-preferences-mail-rules.png"] {
-    content: url('mailspring://Material-Spring/img/settings/directions-fork.png');
+    content: url("mailspring://Material-Spring/img/settings/directions-fork.png");
   }
   img[alt="icon-preferences-folders.png"] {
-    content: url('mailspring://Material-Spring/img/settings/folder-multiple.png');
+    content: url("mailspring://Material-Spring/img/settings/folder-multiple.png");
   }
   img[alt="icon-preferences-signatures.png"] {
-    content: url('mailspring://Material-Spring/img/settings/pen.png');
+    content: url("mailspring://Material-Spring/img/settings/pen.png");
   }
   img[alt="icon-preferences-templates.png"] {
-    content: url('mailspring://Material-Spring/img/settings/file-template.png');
+    content: url("mailspring://Material-Spring/img/settings/file-template.png");
   }
+}
 
+.preferences-wrap .item {
+  padding-top: 8px !important;
+  margin-top: 0px !important;
+  border-bottom: 3px solid transparent;
 }
 
 .preferences-tabs .item.active {
   background-color: #4285f4 !important;
-  border-bottom: 3px solid #F8DC1A;
+  border-bottom: 3px solid #f8dc1a;
   box-shadow: none !important;
   color: white;
+
+  transition-property: border-bottom;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in;
 }
 
+.preferences-wrap .item:active {
+  padding-top: 8px !important;
+  overflow: hidden;
+  background-color: #6da1f5 !important;
+  color: white;
+  border-top-left-radius: 100% 18px !important;
+  border-top-right-radius: 100% 18px !important;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.preferences-wrap .container-preference-tabs .preferences-tabs .item:active img {
+  -webkit-filter: brightness(100%) !important;
+}

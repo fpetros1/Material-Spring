@@ -1,8 +1,18 @@
+/*
+ * File: headerbar.less
+ *
+ * This file handles the top "header" bar containing the mail controls of Mailspring.
+ *
+ * Note that all the icons are identified by their name, since its easy this way.
+ * This will likly break with the upcomming multi-language suport. 
+ *
+ */
+
 @import "variables";
 
 div.toolbar-MessageListSidebar {
   img[alt="toolbar-person-sidebar.png"] {
-    -webkit-mask-image: url('mailspring://Material-Spring/img/person-selected@2x.png') !important;
+    -webkit-mask-image: url("mailspring://Material-Spring/img/person-selected@2x.png") !important;
   }
 }
 
@@ -22,7 +32,7 @@ div.toolbar-Preferences {
 
 div:not(.layout-mode-popout) {
   .sheet-toolbar[name="Toolbar"] {
-    box-shadow: 0 0 4px rgba(0, 0, 0, .05), 0 2px 8px rgba(0, 0, 0, .28);
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.05), 0 2px 8px rgba(0, 0, 0, 0.28);
     border: none;
     height: @header-bar-height;
     max-height: @header-bar-height;
@@ -52,13 +62,13 @@ div:not(.layout-mode-popout) {
     }
     div.menu.search-container {
       img.search-accessory.search {
-        content: url('mailspring://Material-Spring/img/searchloupe-white@2x.png');
+        content: url("mailspring://Material-Spring/img/searchloupe-white@2x.png");
         background-size: auto;
         height: 28px;
         width: 28px;
       }
       img.search-accessory.clear {
-        content: url('mailspring://Material-Spring/img/clear@2x.png');
+        content: url("mailspring://Material-Spring/img/clear@2x.png");
         background-size: auto;
         margin: 6px;
         height: 28px;
@@ -74,7 +84,7 @@ div:not(.layout-mode-popout) {
     div.content-container {
       box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
       border-radius: 2px;
-      padding-right: 4px
+      padding-right: 4px;
     }
   }
 }
@@ -85,57 +95,66 @@ div.sheet-toolbar-container {
     background-color: white !important;
   }
   img[alt="toolbar-archive.png"] {
-    -webkit-mask-image: url('mailspring://Material-Spring/img/archive@2x.png') !important;
+    -webkit-mask-image: url("mailspring://Material-Spring/img/archive@2x.png") !important;
   }
   img[alt="toolbar-trash.png"] {
-    -webkit-mask-image: url('mailspring://Material-Spring/img/trash@2x.png') !important;
+    -webkit-mask-image: url("mailspring://Material-Spring/img/trash@2x.png") !important;
   }
   img[alt="toolbar-spam.png"] {
-    -webkit-mask-image: url('mailspring://Material-Spring/img/spam@2x.png') !important;
+    -webkit-mask-image: url("mailspring://Material-Spring/img/spam@2x.png") !important;
   }
   img[alt="toolbar-not-spam.png"] {
-    -webkit-mask-image: url('mailspring://Material-Spring/img/spam-ok@2x.png') !important;
+    -webkit-mask-image: url("mailspring://Material-Spring/img/spam-ok@2x.png") !important;
   }
   img[alt="toolbar-markasunread.png"] {
-    -webkit-mask-image: url('mailspring://Material-Spring/img/mark-unread@2x.png') !important;
+    -webkit-mask-image: url("mailspring://Material-Spring/img/mark-unread@2x.png") !important;
   }
   img[alt="toolbar-markasread.png"] {
-    -webkit-mask-image: url('mailspring://Material-Spring/img/mark-read@2x.png') !important;
+    -webkit-mask-image: url("mailspring://Material-Spring/img/mark-read@2x.png") !important;
   }
   img[alt="toolbar-movetofolder.png"] {
-    -webkit-mask-image: url('mailspring://Material-Spring/img/folder-move@2x.png') !important;
+    -webkit-mask-image: url("mailspring://Material-Spring/img/folder-move@2x.png") !important;
   }
   img[alt="toolbar-star.png"] {
-    -webkit-mask-image: url('mailspring://Material-Spring/img/unstar@2x.png') !important;
+    -webkit-mask-image: url("mailspring://Material-Spring/img/unstar@2x.png") !important;
   }
   img[alt="toolbar-star-selected.png"] {
-    -webkit-mask-image: url('mailspring://Material-Spring/img/star@2x.png') !important;
+    -webkit-mask-image: url("mailspring://Material-Spring/img/star@2x.png") !important;
   }
   img[alt="toolbar-tag.png"] {
-    -webkit-mask-image: url('mailspring://Material-Spring/img/tag@2x.png') !important;
+    -webkit-mask-image: url("mailspring://Material-Spring/img/tag@2x.png") !important;
   }
   img[alt="toolbar-snooze.png"] {
-    -webkit-mask-image: url('mailspring://Material-Spring/img/snooze@2x.png') !important;
+    -webkit-mask-image: url("mailspring://Material-Spring/img/snooze@2x.png") !important;
   }
   img[alt="ic-toolbar-native-share.png"] {
     height: 16px;
     width: 16px;
-    -webkit-mask-image: url('mailspring://Material-Spring/img/share@2x.png') !important;
+    -webkit-mask-image: url("mailspring://Material-Spring/img/share@2x.png") !important;
   }
 
   img[alt="toolbar-person-sidebar.png"] {
-    -webkit-mask-image: url('mailspring://Material-Spring/img/person@2x.png') !important;
+    -webkit-mask-image: url("mailspring://Material-Spring/img/person@2x.png") !important;
   }
   img[alt="windows-menu-icon.png"] {
-    -webkit-mask-image: url('mailspring://Material-Spring/img/settings@2x.png') !important;
+    -webkit-mask-image: url("mailspring://Material-Spring/img/settings@2x.png") !important;
   }
   img[alt="icon-toolbar-activity.png"] {
     -webkit-mask-size: 32px 32px;
-    -webkit-mask-image: url('mailspring://Material-Spring/img/chart2@2x.png') !important;
+    -webkit-mask-image: url("mailspring://Material-Spring/img/chart2@2x.png") !important;
   }
   img[alt="sheet-back.png"] {
     height: 32px;
     width: 32px;
-    zoom: 1.0 !important;
+    zoom: 1 !important;
+  }
+}
+
+/* Fix for the now applied opacity on certain buttons if the window is blurred (not active) */
+.is-blured {
+  .sheet-toolbar {
+    img[alt="ic-toolbar-native-share.png"] {
+      opacity: 0.5;
+    }
   }
 }

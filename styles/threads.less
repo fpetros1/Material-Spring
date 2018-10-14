@@ -1,9 +1,19 @@
+/*
+ * File: threads.less
+ * 
+ * This file handels the list (threads) of emails for both the single and two-row Panel design.
+ * 
+ * Current Bugs: 
+ * - theme does not distinguish beteen read and not-read.
+ * 
+ */
+
 @import "variables";
 
 /*Popup for activity-button (header bar button)*/
-nylas-popover-container{
-  div[class="scroll-region-content-inner"]{
-    background:white;
+nylas-popover-container {
+  div[class="scroll-region-content-inner"] {
+    background: white;
   }
 }
 
@@ -14,11 +24,11 @@ body.platform-win32 .fixed-popover{
 }*/
 
 /* white background for the activity analytics page */
-div[class="column-ActivityContent"]{
-  .scroll-region-content{
+div[class="column-ActivityContent"] {
+  .scroll-region-content {
     border-left: 1px;
-	border-left-color: rgba(221, 221, 221, 0.6);
-	background-color: white !important;
+    border-left-color: rgba(221, 221, 221, 0.6);
+    background-color: white !important;
   }
 }
 
@@ -40,13 +50,15 @@ div[class="column-ActivityContent"]{
         }
       }
       &.focused {
-        .thread-icon, .mail-important-icon, .draft-icon {
+        .thread-icon,
+        .mail-important-icon,
+        .draft-icon {
           -webkit-filter: none;
         }
         border-color: @taiga-accent !important;
         padding-bottom: 1px;
         border-width: 0 0 0px 4px !important;
-        background-color: #E6ECFF !important;
+        background-color: #e6ecff !important;
       }
       &:hover {
         .thread-icon {
@@ -56,9 +68,9 @@ div[class="column-ActivityContent"]{
     }
     .scroll-region-content {
       .scroll-region-content-inner {
-	    /* Not used, needs to be reimplemented. Shoud be on "column-ThreadList" level, since it need o be on top of "column-MessageList"
-        -webkit-box-shadow: 1.8px -1px 3px 0px rgb(213, 213, 213);
-		*/
+        /* Not used, needs to be reimplemented. Shoud be on "column-ThreadList" level, since it need o be on top of "column-MessageList"
+         * -webkit-box-shadow: 1.8px -1px 3px 0px rgb(213, 213, 213);
+		     */
         .list-rows {
           .list-item {
             cursor: pointer !important;
@@ -67,11 +79,11 @@ div[class="column-ActivityContent"]{
             color: @taiga-dark !important;
             &.focused {
               color: @taiga-dark !important;
-              background-color: #E6ECFF !important;
+              background-color: #e6ecff !important;
             }
             &.selected {
               color: @taiga-dark !important;
-              background-color: darken(#E6ECFF, 5%) !important;
+              background-color: darken(#e6ecff, 5%) !important;
             }
             &.keyboard-cursor {
               .list-column-Item {
@@ -91,6 +103,6 @@ div[class="column-ActivityContent"]{
     }
   }
   .thread-icon-attachment {
-    background-image: url('mailspring://Material-Spring/img/attachment@2x.png') !important;
+    background-image: url("mailspring://Material-Spring/img/attachment@2x.png") !important;
   }
 }
