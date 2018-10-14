@@ -1,8 +1,14 @@
+/*
+ * File: compose.less
+ *
+ * This file handles the composer for a new email and quick-reply.
+ *
+ */
+
 @import "variables";
 
 .scroll-region-content {
   .scroll-region-content-inner {
-
     .composer-centered {
       background: @white !important;
     }
@@ -17,19 +23,65 @@
       .primary-item,
       .secondary-picker {
         top: 1.5px;
-        box-shadow: 0 3px 5px rgba(0, 0, 0, 0.03), 0 0.5px 2px rgba(0, 0, 0, 0.10) !important;
+        box-shadow: 0 3px 5px rgba(0, 0, 0, 0.03), 0 0.5px 2px rgba(0, 0, 0, 0.1) !important;
         img {
           top: -4px;
         }
       }
       .secondary-picker {
-        box-shadow: 0 3px 5px rgba(0, 0, 0, 0.03), 0 0.5px 2px rgba(0, 0, 0, 0.10) !important;
+        box-shadow: 0 3px 5px rgba(0, 0, 0, 0.03), 0 0.5px 2px rgba(0, 0, 0, 0.1) !important;
         height: 1.91em;
         line-height: 1.5em;
         top: -0.99px;
       }
     }
 
+    /* 
+     * only button setting => default image or disabled image
+     * some of the images only have an alt property, some a src property 
+     */
+    button {
+      /* icons on the left: */
+      img[alt="icon-composer-sendlater.png"] {
+        -webkit-mask-image: url(mailspring://Material-Spring/img/mail-composer/datetime.png) !important;
+      }
+      img[src="mailspring://composer-templates/assets/icon-composer-templates@2x.png"] {
+        -webkit-mask-image: url(mailspring://Material-Spring/img/mail-composer/quick-reply.png) !important;
+      }
+      img[src="mailspring://composer-translate/assets/icon-composer-translate@2x.png"] {
+        -webkit-mask-image: url(mailspring://Material-Spring/img/mail-composer/translate.png) !important;
+      }
+
+      img[alt="icon-composer-linktracking.png"] {
+        -webkit-mask-image: url(mailspring://Material-Spring/img/mail-composer/link-disabled.png) !important;
+      }
+
+      img[src="mailspring://open-tracking/assets/icon-composer-eye@2x.png"] {
+        -webkit-mask-image: url(mailspring://Material-Spring/img/mail-composer/eye-disabled.png) !important;
+      }
+      img[alt="icon-composer-reminders.png"] {
+        -webkit-mask-image: url(mailspring://Material-Spring/img/mail-composer/reminder.png) !important;
+      }
+
+      /* icons on the right: */
+      img[alt="icon-composer-attachment.png"] {
+        -webkit-mask-image: url(mailspring://Material-Spring/img/mail-composer/attachment.png) !important;
+      }
+      img[alt="icon-composer-trash.png"] {
+        -webkit-mask-image: url(mailspring://Material-Spring/img/mail-composer/trash.png) !important;
+      }
+    }
+    button.btn-enabled {
+      img[alt="icon-composer-reminders.png"] {
+        -webkit-mask-image: url(mailspring://Material-Spring/img/mail-composer/reminder-active.png) !important;
+      }
+      img[src="mailspring://open-tracking/assets/icon-composer-eye@2x.png"] {
+        -webkit-mask-image: url(mailspring://Material-Spring/img/mail-composer/eye-enabled.png) !important;
+      }
+      img[alt="icon-composer-linktracking.png"] {
+        -webkit-mask-image: url(mailspring://Material-Spring/img/mail-composer/link-enabled.png) !important;
+      }
+    }
   }
 }
 
