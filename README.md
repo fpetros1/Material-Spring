@@ -21,7 +21,7 @@ Notice that this theme is being worked on. Check back soon for updates.
 
 ## Plattform support
 
-This theme was originaly made for Windows 10 at a scaling of 125%. I'm not sure how it behaves with Mac or Linux at different resolutions so please give me feedback on this.
+This theme was originally made for Windows 10 at a scaling of 125%. I'm not sure how it behaves with Mac or Linux at different resolutions so please give me feedback on this.
 
 ## Credit
 
@@ -37,7 +37,7 @@ Icons from:
 
 Code snippets from:
 
-- Execute javascript in LESS: https://www.bennadel.com/blog/2638-executing-javascript-in-the-less-css-precompiler.htm
+- Execute (inject) javascript in LESS: https://www.bennadel.com/blog/2638-executing-javascript-in-the-less-css-precompiler.htm
 - Ripple css/js: https://codepen.io/wheately/
 
 Open Sans Font

@@ -5,67 +5,93 @@
  *
  */
 
-input[type="checkbox"] {
-  position: absolute;
-  opacity: 0;
-}
+.preferences-wrap {
+  input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+  }
 
-input[type="checkbox"] + label {
-  position: relative;
-  cursor: pointer;
-  padding: 0;
-}
+  input[type="checkbox"] + label {
+    position: relative;
+    cursor: pointer;
+    padding: 0;
+  }
 
-input[type="checkbox"] + label:before {
-  margin-left: -20px;
-  content: "";
-  margin-top: 1.8px;
-  margin-right: 10px;
-  display: inline-block;
-  vertical-align: text-top;
-  width: 16px;
-  height: 16px;
-  background: white;
-  border: 2px solid rgba(0, 0, 0, 0.54);
-  border-radius: 2.5px;
-}
+  input[type="checkbox"] + label:before {
+    margin-left: -20px;
+    content: "";
+    margin-top: 1.8px;
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: text-top;
+    width: 16px;
+    height: 16px;
+    background: white;
+    border: 2px solid rgba(0, 0, 0, 0.54);
+    border-radius: 2.5px;
+  }
 
-input[type="checkbox"]:hover + label:before {
-  background: #ecf2fd;
-}
+  input[type="checkbox"]:hover + label:before {
+    background: #ecf2fd;
+  }
 
-input[type="checkbox"]:focus + label:before {
-  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12);
-}
+  input[type="checkbox"]:focus + label:before {
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12);
+  }
 
-input[type="checkbox"]:checked + label:before {
-  background: #4285f4;
-  border: none;
-}
+  input[type="checkbox"]:checked + label:before {
+    background: #4285f4;
+    border: none;
+  }
 
-input[type="checkbox"]:disabled + label {
-  color: #b8b8b8;
-  cursor: auto;
-}
+  input[type="checkbox"]:disabled + label {
+    color: #b8b8b8;
+    cursor: auto;
+  }
 
-input[type="checkbox"]:disabled + label:before {
-  box-shadow: none;
-  background: #ddd;
-}
+  input[type="checkbox"]:disabled + label:before {
+    box-shadow: none;
+    background: #ddd;
+  }
 
-input[type="checkbox"]:checked + label:after {
-  margin-left: -22px;
-  position: absolute;
-  left: 19.5px;
-  top: 3.8px;
-  background: white;
-  width: 0px;
-  height: 0px;
-  box-shadow: none;
-  content: "L";
-  font-size: 13px;
-  color: white;
-  -webkit-transform: rotate(45deg) scaleX(-1);
+  input[type="checkbox"]:checked + label:after {
+    margin-left: -22px;
+    position: absolute;
+    left: 19.5px;
+    top: 3.8px;
+    background: white;
+    width: 0px;
+    height: 0px;
+    box-shadow: none;
+    content: "L";
+    font-size: 13px;
+    color: white;
+    -webkit-transform: rotate(45deg) scaleX(-1);
+  }
+
+  .item {
+    padding-top: 8px !important;
+    margin-top: 0px !important;
+    border-bottom: 3px solid transparent;
+  }
+
+  .container-preference-tabs .preferences-tabs .item:active img {
+    -webkit-filter: brightness(100%) !important;
+  }
+
+  /* fix size of buttons by moving the text to the left */
+  .role-section .col-left {
+    flex: 0.25 !important;
+  }
+
+  .item:active {
+    padding-top: 8px !important;
+    overflow: hidden;
+    background-color: #6da1f5 !important;
+    color: white;
+    border-top-left-radius: 100% 18px !important;
+    border-top-right-radius: 100% 18px !important;
+  }
 }
 
 div.toolbar-Preferences {
@@ -121,12 +147,6 @@ div.preferences-tabs {
   }
 }
 
-.preferences-wrap .item {
-  padding-top: 8px !important;
-  margin-top: 0px !important;
-  border-bottom: 3px solid transparent;
-}
-
 .preferences-tabs .item.active {
   background-color: #4285f4 !important;
   border-bottom: 3px solid #f8dc1a;
@@ -135,18 +155,5 @@ div.preferences-tabs {
 
   transition-property: border-bottom;
   transition-duration: 0.3s;
-  transition-timing-function: ease-in;
-}
-
-.preferences-wrap .item:active {
-  padding-top: 8px !important;
-  overflow: hidden;
-  background-color: #6da1f5 !important;
-  color: white;
-  border-top-left-radius: 100% 18px !important;
-  border-top-right-radius: 100% 18px !important;
-}
-
-.preferences-wrap .container-preference-tabs .preferences-tabs .item:active img {
-  -webkit-filter: brightness(100%) !important;
+  transition-timing-function: ease-out;
 }
