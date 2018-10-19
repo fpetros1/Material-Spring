@@ -69,12 +69,6 @@
     -webkit-transform: rotate(45deg) scaleX(-1);
   }
 
-  .item {
-    padding-top: 8px !important;
-    margin-top: 0px !important;
-    border-bottom: 3px solid transparent;
-  }
-
   .container-preference-tabs .preferences-tabs .item:active img {
     -webkit-filter: brightness(100%) !important;
   }
@@ -83,26 +77,17 @@
   .role-section .col-left {
     flex: 0.25 !important;
   }
-
-  .item:active {
-    padding-top: 8px !important;
-    overflow: hidden;
-    background-color: #6da1f5 !important;
-    color: white;
-    border-top-left-radius: 100% 18px !important;
-    border-top-right-radius: 100% 18px !important;
-  }
 }
 
-div.toolbar-Preferences {
+.toolbar-Preferences {
   box-shadow: 0 7px 0px #4285f4, 0 1px 1px #4285f4 !important;
 }
 
-div.container-preference-tabs {
+.container-preference-tabs {
   border-bottom: none !important;
 }
 
-div.preferences-tabs {
+.preferences-tabs {
   background-color: #4285f4 !important;
   padding-top: 0px !important;
   color: rgb(209, 225, 251);
@@ -110,6 +95,9 @@ div.preferences-tabs {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 
   .item {
+    padding-top: 8px !important;
+    margin-top: 0px !important;
+    border-bottom: 3px solid transparent;
     .tab-icon {
       width: 50px !important;
       height: 50px !important;
@@ -117,6 +105,14 @@ div.preferences-tabs {
     .name {
       padding: 6px 3.6px 12px 3.6px;
     }
+  }
+  .item:active {
+    padding-top: 8px !important;
+    overflow: hidden;
+    background-color: #6da1f5 !important;
+    color: white;
+    border-top-left-radius: 100% 18px !important;
+    border-top-right-radius: 100% 18px !important;
   }
   img[alt="icon-preferences-general.png"] {
     content: url("mailspring://Material-Spring/img/settings/settings.png");
