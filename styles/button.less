@@ -1,0 +1,156 @@
+/*
+ * File: button.less
+ * 
+ * Make the main buttons look nice in a Material Design way.
+ * Only the real buttons have a ripple effect. The dropdowns do not.
+ * 
+ * Source: https://codepen.io/sebj54/pen/oxluI
+ * 
+ */
+
+/* only activate this for some buttons, since we do not want this effect on the headerbar */
+.popout,
+.preferences-content {
+  .btn:not(.menu) {
+    img {
+      filter: brightness(2); /* this makes some gray icons white */
+    }
+
+    position: relative;
+    display: inline-block;
+    box-sizing: border-box;
+    margin: 0 8px;
+    border: none !important;
+    border-radius: 2px !important;
+    padding: 0 16px;
+    min-width: 64px;
+    height: 32px;
+    vertical-align: middle;
+
+    text-align: center;
+    text-overflow: ellipsis;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #2196f3 !important;
+    box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12) !important;
+    font-size: 14px;
+
+    font-weight: 500;
+    line-height: 32px;
+
+    outline: none;
+    cursor: pointer !important;
+    transition: box-shadow 0.2s !important;
+
+    //new
+    background-position: center;
+    transition: background 0.8s;
+  }
+
+  .btn:hover,
+  .btn:focus {
+    box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12) !important;
+  }
+
+  .btn:active {
+    box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12) !important;
+  }
+
+  .btn:disabled {
+    color: rgba(0, 0, 0, 0.38) !important;
+    background-color: rgba(0, 0, 0, 0.12) !important;
+    box-shadow: none;
+    cursor: initial !important;
+  }
+
+  .btn:hover {
+    background: #47a7f5 radial-gradient(circle, transparent 1%, #47a7f5 1%) center/15000%;
+  }
+  .btn:active {
+    background-color: #6eb9f7;
+    background-size: 100%;
+    transition: background 0s;
+  }
+
+  .btn.dropdown-menu {
+    /* remove padding, since it is not clickable for dropdowns */
+    padding: 0px !important;
+    /* give the clickable nameless div the padding instead */
+    div:first-child {
+      padding: 0 8px;
+    }
+    /* the after click dropdown selection */
+    .menu {
+      padding: 0px !important;
+      .header-container {
+        background-color: #f1f1f1;
+      }
+      .content-container {
+        .item {
+          padding: 0px !important;
+          text-transform: none;
+          text-align: left;
+        }
+      }
+    }
+  }
+
+  /* do not enable ripple on dropdown menus, since the "overflow: hidden" breaks things. */
+  .btn:not(.dropdown-menu) {
+    /* this is the centered button ripple animation */
+    overflow: hidden;
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      background-color: currentColor !important;
+      opacity: 0;
+      transition: opacity 0.2s;
+    }
+
+    &:hover::before {
+      opacity: 0.12;
+    }
+
+    &:focus::before {
+      opacity: 0.2;
+    }
+
+    &:active::before {
+      opacity: 0.32;
+    }
+
+    &:disabled::before {
+      opacity: 0;
+    }
+
+    &::after {
+      overflow: hidden !important;
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 18px;
+      border-radius: 50% !important;
+      padding: 50%;
+      width: 32px;
+      height: 32px;
+      background-color: currentColor !important;
+      opacity: 0;
+      transform: translate(-50%, -50%) scale(1);
+      transition: opacity 1s, transform 0.5s !important;
+    }
+
+    &:active::after {
+      opacity: 0.4;
+      transform: translate(-50%, -50%) scale(0);
+      transition: transform 0s !important;
+    }
+
+    &:disabled::after {
+      opacity: 0;
+    }
+  }
+}
