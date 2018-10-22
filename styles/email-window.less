@@ -1,5 +1,15 @@
-.composer-inner-wrap {
+@import "variables";
 
+.ignore-in-parent-frame {
+  body {
+    color: @taiga-dark;
+  }
+  img {
+    color: @taiga-dark;
+  }
+}
+
+.composer-inner-wrap {
   .sheet-toolbar-container {
     &.mode-popout {
       background: #4285f4 !important;
@@ -33,5 +43,4 @@
   .composer-centered {
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.05), 0 2px 8px rgba(0, 0, 0, 0.04);
   }
-
 }
