@@ -12,8 +12,9 @@
 
 .column-MessageListSidebar,
 .column-MessageList,
-.scroll-region-content {
-  background-color: @taiga-lighter !important;
+.scroll-region.messages-wrap,
+.messages-wrap > .scroll-region-content {
+  background-color: #f2f2f2 !important;
 }
 
 div.account-switcher * {
@@ -24,6 +25,10 @@ div.account-switcher * {
 
 .account-sidebar-sections {
   background-color: @taiga-lighter !important;
+
+  .heading {
+    padding-bottom: 5px;
+  }
 
   section {
     .item-container {
@@ -101,13 +106,16 @@ div.account-switcher * {
           //because of the ripple effect:
           position: relative;
 
-          background: lighten(@taiga-light, 30%) !important;
+          background: rgba(202, 219, 245, 0.8) !important; //#CADBF5 with 0.8 alpha
           margin-left: -40px;
           padding-left: 50px !important;
-          margin-right: -10px;
           padding-right: 5px !important;
           border-radius: 0px;
           color: @taiga-dark !important;
+
+          margin-right: 0px;
+          border-top-right-radius: 15px;
+          border-bottom-right-radius: 15px;
 
           .item-count-box {
             background: transparent !important;
