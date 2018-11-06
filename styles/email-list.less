@@ -68,6 +68,7 @@ div[class="column-ActivityContent"] {
     .scroll-region-content {
       // Not used, needs to be reimplemented. Shoud be on "column-ThreadList" level, since it need o be on top of "column-MessageList"
       box-shadow: 2px 1.25px 3px -1px rgba(168, 168, 168, 0.5);
+      background-color: #f6f6f6; //shown, if list is not full of items
       z-index: 3;
       .scroll-region-content-inner {
         .list-rows {
@@ -109,5 +110,6 @@ div[class="column-ActivityContent"] {
   }
   .thread-icon-attachment {
     background-image: url("mailspring://Material-Spring/img/attachment@2x.png") !important;
+    image-rendering: -webkit-optimize-contrast;
   }
 }

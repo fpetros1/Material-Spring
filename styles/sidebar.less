@@ -106,7 +106,11 @@ div.account-switcher * {
           //because of the ripple effect:
           position: relative;
 
-          background: rgba(202, 219, 245, 0.8) !important; //#CADBF5 with 0.8 alpha
+          transition-property: background-color;
+          transition-duration: 0.2s;
+          transition-timing-function: ease-out;
+
+          background-color: rgba(202, 219, 245, 0.8) !important; //#CADBF5 with 0.8 alpha
           margin-left: -40px;
           padding-left: 50px !important;
           padding-right: 5px !important;
