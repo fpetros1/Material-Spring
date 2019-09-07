@@ -4,8 +4,8 @@ A theme based on Google's Material Design for the [Mailspring](http://www.getmai
 
 <img src="https://raw.githubusercontent.com/LightSnowDev/Material-Spring/master/screenshot/wallpaper_screenshot.jpg" />
 
-## Staus of this repo
-Mailspring failed to communicate releases, progress or just a "one month break, see ya till then". This means I will not update this repo any more.
+## Status of this repo
+Mailspring failed to communicate releases, progress or just a "one or two months vacation, see ya till then". This means I will not update this repo any more.
 
 ## This theme
 
