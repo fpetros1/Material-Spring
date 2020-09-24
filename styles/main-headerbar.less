@@ -31,7 +31,7 @@ div.toolbar-Preferences {
 }
 
 div:not(.layout-mode-popout) {
-  .sheet-toolbar[name="Toolbar"] {
+  .sheet-toolbar {
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.05), 0 2px 8px rgba(0, 0, 0, 0.28);
     border: none;
     height: @header-bar-height;
@@ -93,6 +93,12 @@ div.sheet-toolbar-container {
   img {
     -webkit-mask-size: 100%;
     background-color: white !important;
+  }
+  img[alt="toolbar-compose.png"] {
+	-webkit-mask-size: 32px 32px !important;
+	margin-top: 7px !important;
+	zoom: 0.65 !important;
+    -webkit-mask-image: url("mailspring://Material-Spring/img/composing-mail@2x.png") !important;
   }
   img[alt="toolbar-archive.png"] {
     -webkit-mask-image: url("mailspring://Material-Spring/img/archive@2x.png") !important;
