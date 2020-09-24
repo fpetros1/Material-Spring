@@ -5,7 +5,7 @@ A theme based on Google's Material Design for the [Mailspring](http://www.getmai
 <img src="https://raw.githubusercontent.com/LightSnowDev/Material-Spring/master/screenshot/wallpaper_screenshot.jpg" />
 
 ## Status of this repo
-Mailspring failed to communicate releases, progress or just a "one or two months vacation, see ya till then". This means I will not update this repo any more.
+Updated for new mailspring versions. Tested: 24/09/2020
 
 ## This theme
 
@@ -25,6 +25,10 @@ This theme tries to follow the basic Google Material Design guidelines in Versio
 This theme was originally made for Windows 10 at a scaling of 125%. I'm not sure how it behaves with Mac or Linux at different resolutions.
 
 ## Credit
+
+Author:
+
+- https://github.com/LightSnowDev
 
 This theme is based on:
 
