@@ -21,7 +21,6 @@
     position: relative;
     display: inline-block;
     box-sizing: border-box;
-    margin: 0;
     border: none !important;
     border-radius: 2px !important;
     padding: 0 0.9rem;
@@ -42,6 +41,10 @@
     outline: none;
     cursor: pointer !important;
     transition: box-shadow 0.2s !important;
+  }
+  
+  .btn:not(.menu) + .btn:not(.menu) {
+	margin-left: 6px !important;
   }
 
   .btn:hover,
