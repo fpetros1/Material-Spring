@@ -35,6 +35,7 @@ Icons from:
 
 - https://material.io/icons
 - https://github.com/Templarian/MaterialDesign
+- Composing Mail icon by Icons8: https://icons8.com/icon/93468/composing-mail
 
 Code snippets from:
 
